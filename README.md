@@ -69,8 +69,9 @@ pip install -r requirements.txt
 
 
 ## Usage (Unity)
-1. Start the `BlendshapeToolkit` with Unity and run the project.
-2. Click the `Initialize` button to call `image2bs` project to generate animation. For more details about usage of the toolkit, please refer to our paper.
+1. In the `image2bs/inference.bat` file, change `PYTHON_PATH` to the absolute path of the folder containing the Python interpreter used for `inference`. Change `INF_PATH` to the absolute path of the `image2bs` folder.
+2. Start the `BlendshapeToolkit` with Unity and run the project.
+3. Click the `Initialize` button to call `image2bs` project to generate animation. For more details about usage of the toolkit, please refer to our paper.
 
 
 ## Acknowledgement
