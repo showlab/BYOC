@@ -1,0 +1,29 @@
+CUDA_VISIBLE_DEVICES=7 \
+python train.py \
+    --dataset_mode exp2bsmix \
+    --exp_basis_folder_virtual Deep3DFaceRecon_pytorch/checkpoints/facerecon/results/test_images/epoch_20_000000 \
+    --exp_basis_folder_real Deep3DFaceRecon_pytorch/checkpoints/facerecon/results/test_images/epoch_20_000000 \
+    --blendshape_file Deep3DFaceRecon_pytorch/datasets/blendshape_gt.json \
+    --model exp2bsmix \
+    --netV exp2bsleakyclamp \
+    --netE fc50blendshape \
+    --netG modulate \
+    --checkpoints_dir checkpoint/MLP_64_256_512_256_113_bs_512_relu_bn_L1L2 \
+    --no_dropout \
+    --no_flip \
+    --crop_size 256 \
+    --print_freq 20 \
+    --save_epoch_freq 1 \
+    --display_freq 20 \
+    --display_server localhost \
+    --display_port 8097 \
+    --display_ncols 2 \
+    --display_env MLP_64_256_512_256_113_bs_512_relu_bn_L1L2 \
+    --name MLP_64_256_512_256_113_bs_512_relu_bn_L1L2 \
+    --batchSize 512 \
+    --lr 3e-4 \
+    --n_epochs 50 \
+    --n_epochs_decay 8 \
+    --no_TTUR \
+    --style_dim 512 \
+    --norm_blendshape none
